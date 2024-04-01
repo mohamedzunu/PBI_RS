@@ -1,1 +1,22 @@
-runs-on: self-hosted
+
+name: SSRS Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, windows]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy SSRS Reports
+      run: |
+        # Add commands to deploy SSRS reports
+        # e.g., use rs.exe utility to deploy reports
+
+"C:\Users\Windows11\Desktop\SSRS_Download_All.ps1"
